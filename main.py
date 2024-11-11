@@ -14,12 +14,26 @@ what would you like to do
 4.sleep
 """)
     if action == '1':
-        my_cat.train()
+        is_dead = my_cat.train()
+        if is_dead == "DEAD":
+            break
+        my_cat.show_stats()
+        
     elif action == '2':
-        my_cat.feed()
+        is_dead = my_cat.feed()
+        if is_dead == "DEAD":
+            break
+        my_cat.show_stats()
     elif action == '3':
-        my_cat.play()
+        is_dead = my_cat.play()
+        if is_dead == "DEAD":
+            break
+        my_cat.show_stats()
     elif action =='4':
-        my_cat.sleep()
+        is_dead = my_cat.sleep()
+        if is_dead == "DEAD":
+            break
+        my_cat.show_stats()
+    
     
         

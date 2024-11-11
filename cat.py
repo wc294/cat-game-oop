@@ -17,23 +17,26 @@ class Cat:
         self.energy-= 5
         self.intelligence+=1
         self.age += 0.1
+        if self.energy<0 or self.intelligence<0 or self.age<60:
+            print('cat is dead')
+            return "DEAD"
     def feed(self):
-        print(f'{self.name}is eating;...')
+        print(f'{self.name} is eating;...')
         self.energy += 10
-        self.weight +=1 
+        self.mass +=1 
         self.age +=0.1
     def play(self):
-        print(f'{self.name}is playing...')
+        print(f'{self.name} is playing...')
         self.energy -=10
         self.intelligence +=0.1
         self.age+=1
     def sleep(self):
-        print(f'{self.name}is sleeping...')
+        print(f'{self.name} is sleeping...')
         self.energy +=15
         self.intelligence +=0.01
         self.age+=2
     def show_stats(self):
-        print(f'{self.age,self.energy,self.intelligence,self.mass}')
+        print(f'{'age is ',self.age,'energy is ',self.energy,'intelligence is ',self.intelligence,'mass is ',self.mass}')
         
     
 #now make 2 cats
